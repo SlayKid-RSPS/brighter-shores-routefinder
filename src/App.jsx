@@ -15,6 +15,15 @@ const App = () => {
           mobileMenuShown={mobileMenuShown}
           setMobileMenuShown={setMobileMenuShown}
         />
+        <ThemeProvider>
+      <header>
+        <h1>My App</h1>
+        <button onClick={toggleTheme}>
+          {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </button>
+      </header>
+      {/* Render pages */}
+    </ThemeProvider>
         <Routes>
           {pages.map((page) => (
             <Route
